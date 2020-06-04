@@ -1,4 +1,4 @@
 # ansible-dynamic-inventory
 
 ## Command
- ```ansible-playbook playbook -i get_inventory.py ```
+ ```ansible-playbook -i get_inventory.py playbook.yml```
