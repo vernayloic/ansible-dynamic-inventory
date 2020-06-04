@@ -13,6 +13,7 @@ try:
 except ImportError:
     import simplejson as json
 
+
 class ExampleInventory(object):
 
     def __init__(self):
@@ -30,13 +31,13 @@ class ExampleInventory(object):
         else:
             self.inventory = self.empty_inventory()
 
-        print(json.dumps(self.inventory));
+        print(json.dumps(self.inventory))
 
     # Example inventory for testing.
     def example_inventory(self):
         return {
             'group': {
-                'hosts': ['51.255.211.168' ],
+                'hosts': ['51.255.211.168'],
                 'vars': {
                     'ansible_ssh_user': 'centos',
                     'ansible_ssh_private_key_file':
@@ -60,9 +61,10 @@ class ExampleInventory(object):
     # Read the command line args passed to the script.
     def read_cli_args(self):
         parser = argparse.ArgumentParser()
-        parser.add_argument('--list', action = 'store_true')
-        parser.add_argument('--host', action = 'store')
+        parser.add_argument('--list', action='store_true')
+        parser.add_argument('--host', action='store')
         self.args = parser.parse_args()
+
 
 # Get the inventory.
 ExampleInventory()
