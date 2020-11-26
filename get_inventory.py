@@ -47,7 +47,7 @@ class ExampleInventory(object):
             },
             '_meta': {
                 'hostvars': {
-                    '51.255.211.168': {
+                    '51.68.28.213': {
                         'host_specific_var': 'centos'
                     }
                 }
